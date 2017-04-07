@@ -20,8 +20,9 @@ gulp.task('build-css', function(){
 
 })
 
+
 gulp.task('build-js', function() {
-   return gulp.src('js/**/*.js')
+   return gulp.src('./js/**/*.js')
       .pipe(sourcemaps.init())
       .pipe(print())
       .pipe(babel({ presets: ['es2015'] }))
@@ -31,12 +32,18 @@ gulp.task('build-js', function() {
       .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('build', ['build-css', 'build-js'], function() {
+gulp.task('build', ['build-css', 'build-js', 'views'], function() {
     return gulp.src('index.html')
         .pipe(cachebust.references())
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('views', function() {
+    return gulp.src('./views/**/*.html')
+        .pipe(cachebust.references())
+        .pipe(gulp.dest('./dist/views'));
+});
+
 gulp.task('watch', function() {
-    return gulp.watch(['./index.html','./partials/*.html', './styles/*.*css', './js/**/*.js'], ['build']);
+    return gulp.watch(['./index.html','./partials/*.html', './styles/*.*css', './js/**/*.js', './views/**/*.html'], ['build']);
 });

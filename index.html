@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app='bu'>
+
+<head>
+  <meta charset='utf-a'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' href='./dist/styles.css'>
+  <title>burntuniverse</title>
+</head>
+
+<body ng-controller='textCtrl'>
+
+  <header class='main-header'>
+
+    <p class='logo'>BURNT UNIVERSE</p>
+    <div class='line'></div>
+  </header>
+
+  <!-- menu directive -->
+  <bumenu class='menu' ng-if='test'></bumenu>
+
+  <footer class='main-footer'>
+    <!-- menu-button -->
+    <div class='icon-button-container'>
+      <button class='icon-button' ng-click='test = !test'></button>
+    </div>
+  </footer>
+
+
+
+
+  <main role='main'>
+
+    <!-- text state -->
+      <ui-view></ui-view>
+    <!-- Desktop directory state -->
+    <!-- directory state -->
+
+    <!-- create state?? -->
+
+
+  </main>
+
+
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js'></script>
+<script src='./dist/js/bundle.js'></script>
+
+</body>
+
+</html>

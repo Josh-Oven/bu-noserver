@@ -20,6 +20,6 @@
     "gulp-scss": "^1.4.0",
     "gulp-sourcemaps": "^2.5.1",
     "gulp-uglify": "^2.1.2"
-  },
+  }
 
 }
