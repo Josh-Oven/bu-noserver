@@ -6,8 +6,14 @@ angular.module('bu', ['ui.router']).config(function($stateProvider, $urlRouterPr
         templateUrl: '../views/homeTmplt.html'
      })
      .state('text', {
-        url: '/text',
-        templateUrl: './views/textTmplt.html'
+        url: '/text/:id',
+        templateUrl: './views/textTmplt.html',
+        controller: 'textCtrl'
+     })
+     .state('directory', {
+       url: '/directory/',
+       templateUrl: './views/directoryTmplt.html',
+       controller: 'menuCtrl'
      })
 
     $urlRouterProvider.otherwise('/')

@@ -47,3 +47,5 @@ gulp.task('views', function() {
 gulp.task('watch', function() {
     return gulp.watch(['./index.html','./partials/*.html', './styles/*.*css', './js/**/*.js', './views/**/*.html'], ['build']);
 });
+
+gulp.task('default', ['build', 'watch'])

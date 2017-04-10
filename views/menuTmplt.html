@@ -1,14 +1,17 @@
 
-<section>
+<input input="{{searchTerm}}" ng-model='searchTerm' class='search-input' placeholder='...Find' ng-if='searchIf'></input>
+{{searchTerm}}
+<!-- <input ng-model="workbith" type="text">
+{{workBith}} -->
   <div class="link-container">
     <div class='link-underline'>
-      <a ui-sref='text'><p class="menu-link">Read</p></a><br>
+      <a ui-sref='directory'><p class="menu-link">Read</p></a><br>
     </div>
     <div class='link-underline'>
-      <a><p class="menu-link">Find</p></a><br>
+      <a ui-sref='directory'><p ng-click='searchIf = !searchIf' class="menu-link">Find</p></a><br>
+
     </div>
     <div class='link-underline'>
       <a><p class="menu-link">Create</p></a><br>
     </div>
   </div>
-</section>

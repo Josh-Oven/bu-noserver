@@ -2,7 +2,8 @@
 <html ng-app='bu'>
 
 <head>
-  <meta charset='utf-a'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' />
+  <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' href='./dist/styles.css'>
   <title>burntuniverse</title>
@@ -12,24 +13,22 @@
 
   <header class='main-header'>
 
-    <p class='logo'>BURNT UNIVERSE</p>
+    <a ui-sref='home'><p class='logo'>BURNT UNIVERSE</p></a>
     <div class='line'></div>
   </header>
 
   <!-- menu directive -->
-  <bumenu class='menu' ng-if='test'></bumenu>
+  <bumenu input="cheese" class='menu' ng-if='test'></bumenu>
+  <button class='toggle-color'></button>
 
-  <footer class='main-footer'>
     <!-- menu-button -->
-    <div class='icon-button-container'>
-      <button class='icon-button' ng-click='test = !test'></button>
-    </div>
-  </footer>
+  <button class='icon-button' ng-click='test = !test'></button>
 
 
 <div class='header-buffer'></div>
 
   <main role='main'>
+
 
     <!-- text state -->
       <ui-view></ui-view>
